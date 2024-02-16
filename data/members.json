@@ -1,0 +1,100 @@
+[
+    {
+        "firstName":"Марія",
+        "secondName":"Гресько",
+        "position":"Президентка Ліцею",
+        "description":"none",
+        "image":"./images/pupil-icons/masha.jpg"
+    },
+    {
+        "firstName":"Єгор",
+        "secondName":"Лемещак",
+        "position":"Заступник Президента",
+        "description":"none",
+        "image":"./images/pupil-icons/egor.jpg"
+    },
+    {
+        "firstName":"Михайло",
+        "secondName":"Мельник",
+        "position":"Відповідальний за техніку",
+        "description":"none",
+        "image":"./images/pupil-icons/misha.jpg"
+    },
+    {
+        "firstName":"Сергій",
+        "secondName":"Музичук",
+        "position":"Заступник Президента",
+        "description":"none",
+        "image":"./images/pupil-icons/sergiy.jpg"
+    },
+    {
+        "firstName":"Ілля",
+        "secondName":"Ткачук",
+        "position":"Графічний дизайнер",
+        "description":"none",
+        "image":"./images/pupil-icons/tkach.jpg"
+    },
+    {
+        "firstName":"Владислав",
+        "secondName":"Гненний",
+        "position":"Оператор та фотограф",
+        "description":"none",
+        "image":"./images/pupil-icons/vladyslav.jpg"
+    },
+    {
+        "firstName":"Анна",
+        "secondName":"Сухоставська",
+        "position":"Chat-Bot Адмінка",
+        "description":"none",
+        "image":"./images/pupil-icons/anna.jpg"
+    },
+    {
+        "firstName":"Катерина",
+        "secondName":"Цехмейструк",
+        "position":"SMM Telegram",
+        "description":"none",
+        "image":"./images/pupil-icons/kateryna.jpg"
+    },
+    {
+        "firstName":"Єлизавета",
+        "secondName":"Молдован",
+        "position":"Журналіст",
+        "description":"none",
+        "image":"./images/pupil-icons/jelyzaveta.jpg"
+    },
+    {
+        "firstName":"Дарина",
+        "secondName":"Олексенко",
+        "position":"Креативщик",
+        "description":"none",
+        "image":"./images/pupil-icons/daryna.jpg"
+    },
+    {
+        "firstName":"Олександра",
+        "secondName":"Качура",
+        "position":"SMM TikTok",
+        "description":"none",
+        "image":"./images/pupil-icons/oleksandra.jpg"
+    },
+    {
+        "firstName":"Кіра",
+        "secondName":"Посвалюк",
+        "position":"Журналіст",
+        "description":"none",
+        "image":"./images/pupil-icons/kira.jpg"
+    },
+    {
+        "firstName":"Дар'я",
+        "secondName":"Жмуд",
+        "position":"Креативщик",
+        "description":"none",
+        "image":"./images/pupil-icons/darja.jpg"
+    },
+    {
+        "firstName":"Маргарита",
+        "secondName":"Волуйко",
+        "position":"Креативщик",
+        "description":"none",
+        "image":"./images/pupil-icons/margaryta.jpg"
+    }
+]
