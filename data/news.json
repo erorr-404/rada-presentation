@@ -1,0 +1,26 @@
+[
+    {
+        "title":"Рада провела свято для 8-их класів",
+        "description":"Рада Президента провела учням восьмих класів захід на честь дня Свягого Валентина. Діти взяли участь в цікавих конкурсах та добре провели час.",
+        "image":"./images/news/3.jpg",
+        "id":"eve4"
+    },
+    {
+        "title":"Утренік",
+        "description":"До канікул був. Для дітей маленьких. Там ше дракон і відьма були.",
+        "image":"./images/news/1.jpg",
+        "id":"eve3"
+    },
+    {
+        "title":"Рада доєдналась до волонтерського руху",
+        "description":"Заступник Президента Єгор Лемещак вступив до волонтерського руху. Цитата: '<i>Хіхіхіххі</i>'",
+        "image":"./images/news/2.jpg",
+        "id":"eve2"
+    },
+    {
+        "title":"Event",
+        "description":"Event description.",
+        "image":"https://st2.depositphotos.com/1635204/7654/i/450/depositphotos_76549817-stock-photo-word-events-on-colorful-wooden.jpg",
+        "id":"eve1"
+    }
+]
