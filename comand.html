@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Рада Президента - Команда</title>
 </head>
-<body>
+<body id="doc-body">
     <div class="header">
         <div class="lyceum-name">
             <a href="http://vl4.edu.vn.ua">
@@ -60,6 +60,7 @@
         <div class="table-container" id="memberTable">
             <!-- Members loading from members.json -->
         </div>
+        <div class="overlay" id="overlay"></div>
     </div>
     <div class="footer">
         <span>
@@ -69,6 +70,27 @@
             Сайт зробив Erorr©
         </span>
     </div>
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <div class="title">Інформація</div>
+            <button data-close-button class="close-button">&times;</button>
+        </div>
+        <!--
+        <div class="modal-body">
+            <img src="./images/pupil-icons/masha.jpg" alt="">
+            <div class="text">
+                <div class="name">
+                    Гресько Марія
+                </div>
+                <div class="member-position">
+                    Президентка Ліцею
+                </div>
+                <div class="description">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse quod alias ut illo doloremque eum ipsum obcaecati distinctio debitis reiciendis quae quia soluta totam doloribus quos nesciunt necessitatibus, consectetur quisquam accusamus ex, dolorum, dicta vel? Nostrum voluptatem totam, molestiae rem at ad autem dolor ex aperiam. Amet assumenda eos architecto, dolor placeat deserunt voluptatibus tenetur sint officiis perferendis atque! Voluptatem maxime eius eum dolorem dolor exercitationem quis iusto totam! Repudiandae nobis nesciunt sequi iure! Eligendi, eius libero. Ex, repellat sapiente!
+                </div>
+            </div>
+        </div>
+        -->
     <script src="./command.js"></script>
 </body>
 </html>

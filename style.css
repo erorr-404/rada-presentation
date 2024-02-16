@@ -189,6 +189,7 @@ body {
     width: 270px;
     height: 470px;
     margin: 20px;
+    cursor: pointer;
 }
 
 .person img {
@@ -213,6 +214,94 @@ body {
 .person:hover {
     transition: all .5s ease;
     transform: scale(1.15, 1.15);
+}
+
+#overlay{
+    content: "";
+    background-color: var(--color2);
+    position: fixed;
+    z-index: 10;
+    opacity: 0%;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    pointer-events: none;
+}
+
+#overlay.active{
+    opacity: 90%;
+    pointer-events: all;
+}
+
+.modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    transition: 320ms ease-in-out;
+    border-radius: 10px;
+    z-index: 10;
+    background-color: var(--color4);
+    width: 70%;
+    max-width: 80%;
+  }
+  
+.modal.active {
+    transform: translate(-50%, -50%) scale(1);
+}
+  
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--color4);
+    background-color: var(--color3);
+    border-radius: 10px 10px 0px 0px;
+}
+  
+.modal-header .title {
+    font-size: 2rem;
+    font-weight: bold;
+}
+  
+.modal-header .close-button {
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--color4);
+}
+  
+.modal-body {
+    display: flex;
+    padding: 10px 15px;
+}
+
+.modal-body img {
+    height: 450px;
+    width: 450px;
+}
+
+.modal-body .text {
+    padding: 10px;
+    font-size: 20px;
+}
+
+.modal-body .text .name {
+    font-size: 40px;
+}
+
+.modal-body .text .member-position {
+    margin-top: 15px;
+    font-size: 30px;
+}
+
+.modal-body .text .description {
+    margin-top: 30px;
 }
 
 /* gallery */

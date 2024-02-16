@@ -4,97 +4,111 @@
         "secondName":"Гресько",
         "position":"Президентка Ліцею",
         "description":"none",
-        "image":"./images/pupil-icons/masha.jpg"
+        "image":"./images/pupil-icons/masha.jpg",
+        "id":"masha"
     },
     {
         "firstName":"Єгор",
         "secondName":"Лемещак",
         "position":"Заступник Президента",
         "description":"none",
-        "image":"./images/pupil-icons/egor.jpg"
+        "image":"./images/pupil-icons/egor.jpg",
+        "id":"egor"
     },
     {
         "firstName":"Михайло",
         "secondName":"Мельник",
         "position":"Відповідальний за техніку",
         "description":"none",
-        "image":"./images/pupil-icons/misha.jpg"
+        "image":"./images/pupil-icons/misha.jpg",
+        "id":"misha"
     },
     {
         "firstName":"Сергій",
         "secondName":"Музичук",
         "position":"Заступник Президента",
         "description":"none",
-        "image":"./images/pupil-icons/sergiy.jpg"
+        "image":"./images/pupil-icons/sergiy.jpg",
+        "id":"sergiy"
     },
     {
         "firstName":"Ілля",
         "secondName":"Ткачук",
         "position":"Графічний дизайнер",
         "description":"none",
-        "image":"./images/pupil-icons/tkach.jpg"
+        "image":"./images/pupil-icons/tkach.jpg",
+        "id":"tkach"
     },
     {
         "firstName":"Владислав",
         "secondName":"Гненний",
         "position":"Оператор та фотограф",
         "description":"none",
-        "image":"./images/pupil-icons/vladyslav.jpg"
+        "image":"./images/pupil-icons/vladyslav.jpg",
+        "id":"vladyslav"
     },
     {
         "firstName":"Анна",
         "secondName":"Сухоставська",
         "position":"Chat-Bot Адмінка",
         "description":"none",
-        "image":"./images/pupil-icons/anna.jpg"
+        "image":"./images/pupil-icons/anna.jpg",
+        "id":"anna"
     },
     {
         "firstName":"Катерина",
         "secondName":"Цехмейструк",
         "position":"SMM Telegram",
         "description":"none",
-        "image":"./images/pupil-icons/kateryna.jpg"
+        "image":"./images/pupil-icons/kateryna.jpg",
+        "id":"kateryna"
     },
     {
         "firstName":"Єлизавета",
         "secondName":"Молдован",
         "position":"Журналіст",
         "description":"none",
-        "image":"./images/pupil-icons/jelyzaveta.jpg"
+        "image":"./images/pupil-icons/jelyzaveta.jpg",
+        "id":"jelyzaveta"
     },
     {
         "firstName":"Дарина",
         "secondName":"Олексенко",
         "position":"Креативщик",
         "description":"none",
-        "image":"./images/pupil-icons/daryna.jpg"
+        "image":"./images/pupil-icons/daryna.jpg",
+        "id":"daryna"
     },
     {
         "firstName":"Олександра",
         "secondName":"Качура",
         "position":"SMM TikTok",
         "description":"none",
-        "image":"./images/pupil-icons/oleksandra.jpg"
+        "image":"./images/pupil-icons/oleksandra.jpg",
+        "id":"oleksandra"
     },
     {
         "firstName":"Кіра",
         "secondName":"Посвалюк",
         "position":"Журналіст",
         "description":"none",
-        "image":"./images/pupil-icons/kira.jpg"
+        "image":"./images/pupil-icons/kira.jpg",
+        "id":"kira"
     },
     {
         "firstName":"Дар'я",
         "secondName":"Жмуд",
         "position":"Креативщик",
         "description":"none",
-        "image":"./images/pupil-icons/darja.jpg"
+        "image":"./images/pupil-icons/darja.jpg",
+        "id":"darja"
     },
     {
         "firstName":"Маргарита",
         "secondName":"Волуйко",
         "position":"Креативщик",
         "description":"none",
-        "image":"./images/pupil-icons/margaryta.jpg"
+        "image":"./images/pupil-icons/margaryta.jpg",
+        "id":"margaryta"
     }
 ]
