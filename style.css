@@ -226,12 +226,18 @@ body {
     .block-1-h1-text {
         font-size: 30px;
         padding: 20px;
+        padding-top: 30vh;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+    }
+    
+    .block-1-h1-text h1 {
+        text-align: center;
     }
 
     .block-2::before {
-        font-size: 200px;
-        bottom: 100px;
-        right: 15%;
+        display: none;
     }
 
     .block-2 {
@@ -240,10 +246,12 @@ body {
 
     .block-2 h2 {
         font-size: 50px;
+        text-align: center;
     }
 
     .block-2 p {
-        display: none;
+        font-size: 20px;
+        text-align: justify;
     }
 
     .block-2 ul {
@@ -342,7 +350,7 @@ body {
     z-index: 10;
     background-color: var(--color4);
     width: 70%;
-    max-width: 80%;
+    /*max-width: 80%;*/
   }
   
 .modal.active {
@@ -411,66 +419,35 @@ body {
 /* gallery */
 
 .photos-grid {
-    margin: 50px;
-    display: grid;
+    margin: 50px 0px 0px;
+    padding: 4px;
+    border: 5px solid var(--color1);
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    grid-template-rows: repeat(2, 400px);
-    grid-template-columns: repeat(3, 400px);
-    gap: 4px;
+    background-image: url(./images/background.png);
 }
 
-.photos-grid > .photo-item {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+.photos-grid img {
+    height: 300px;
+    margin: 2px;
     cursor: pointer;
 }
 
-.photos-grid > .photo-item:hover {
-    transition: all .5s ease;
-    transform: scale(1.15, 1.15) rotate(1deg);
-    cursor: pointer;
-}
-/*
-.photos-grid > .photo-item:active {
-    transition: all .5s ease-out;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0.8, 0.8);
-    cursor: pointer;
-}*/
-
-.photos-grid > .photo-item:active {
+.photos-grid img:hover {
+    transform: scale(1.15) rotate(1deg);
     transition: all .5s ease-in-out;
-    transform: scale(1.4, 1.4);
 }
 
-.photo-item:nth-child(1) {
-    background-image: url(https://www.antagonist.nl/blog/wp-content/uploads/2015/04/wordpress_errors.jpg);
-    grid-column: 1/2;
-    grid-row: 1/3;
-}
+@media screen and (max-width: 1045px) {
+    .photos-grid img {
+        height: fit-content;
+        max-width: 95vw;
+    }
 
-.photo-item:nth-child(2) {
-    background-image: url(https://cdn.presslabs.com/wp-content/uploads/2018/03/custom-error-pages.png);
-    grid-column: 2/4;
-    grid-row: 1/2;
-}
-
-.photo-item:nth-child(4) {
-    background-image: url(https://vl4.edu.vn.ua/wp-content/uploads/webp/uploads/2022/06/ekolend.jpg.webp);
-    grid-column: 2/3;
-    grid-row: 2/3;
-}
-
-.photo-item:nth-child(5) {
-    background-image: url(https://vl4.edu.vn.ua/wp-content/uploads/webp/uploads/2022/06/osnjvna3.jpg.webp);
-    grid-column: 3/4;
-    grid-row: 2/3;
+    .photos-grid img:hover {
+        transform: none;
+    }
 }
 
 /* events */
@@ -484,6 +461,7 @@ body {
 
 .event {
     width: 70vh;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
     margin: 20px 10px;
@@ -499,7 +477,7 @@ body {
 
 .event img {
     min-width: 100%;
-    height: 350px;
+    height: fit-content;
     border-radius: 10px 10px 0px 0px;
 }
 
@@ -531,6 +509,31 @@ body {
 
 .modal-event-description{
     margin-top: 30px;
+}
+
+@media screen and (max-width: 1045px) {
+    .event {
+        width: 90vw;
+    }
+
+    .event img {
+        height: fit-content;
+    }
+}
+
+@media screen and (max-width: 690px) {
+    .modal {
+        width: 90vw;
+    }
+
+    .modal-body {
+        flex-direction: column;
+    }
+
+    .modal-body img {
+        width: 100%;
+        height: fit-content;
+    }
 }
 
 /* contacts */
