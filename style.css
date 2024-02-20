@@ -255,7 +255,7 @@ body {
     }
 
     .block-2 ul {
-        font-size: 30px;
+        font-size: 21px;
         padding: 50px;
     }
 }
@@ -389,7 +389,7 @@ body {
 }
 
 .modal-body img {
-    height: 450px;
+    height: fit-content;
     width: 450px;
 }
 
