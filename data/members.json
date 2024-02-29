@@ -3,7 +3,7 @@
         "firstName":"Марія",
         "secondName":"Гресько",
         "position":"Президентка Ліцею",
-        "description":"none",
+        "description":"Привіт, я Марія. Я Президент 4 ліцею, займаюсь активною громадською діяльністю та відстоюю права учнів.",
         "image":"./images/pupil-icons/masha.jpg",
         "id":"masha"
     },
@@ -11,31 +11,31 @@
         "firstName":"Єгор",
         "secondName":"Лемещак",
         "position":"Заступник Президента",
-        "description":"none",
+        "description":"Хело, мене звати Єгор. Я заступник президента ліцею і громадський діяч. Реалізовую свій проєкт і допомагаю в організації різних заходів. Представляю школу на міському рівні. Координую волонтерський центр.",
         "image":"./images/pupil-icons/egor.jpg",
         "id":"egor"
-    },
-    {
-        "firstName":"Михайло",
-        "secondName":"Мельник",
-        "position":"Відповідальний за техніку",
-        "description":"none",
-        "image":"./images/pupil-icons/misha.jpg",
-        "id":"misha"
     },
     {
         "firstName":"Сергій",
         "secondName":"Музичук",
         "position":"Заступник Президента",
-        "description":"none",
+        "description":"Сергій, заступник президента ліцею, шкільний та міський омбудсмен. Я зацікавлений у вивченні інформаційних технологій, права, філософії та психології. Постійно розвиваю свої знання та навички, завдяки чому стаю все більш компетентним у своїй галузі.",
         "image":"./images/pupil-icons/sergiy.jpg",
         "id":"sergiy"
+    },
+    {
+        "firstName":"Михайло",
+        "secondName":"Мельник",
+        "position":"Відповідальний за техніку",
+        "description":"Я Михайло, є членом ради. Я відповідальний за технічний супровід заходів. Мені дуже подобається все з чим зв'язані комп'ютери, тому завжди цікавлюсь цим і вдосконалюю свої навички.",
+        "image":"./images/pupil-icons/misha.jpg",
+        "id":"misha"
     },
     {
         "firstName":"Ілля",
         "secondName":"Ткачук",
         "position":"Графічний дизайнер",
-        "description":"none",
+        "description":"Всім привіт! Я учень 10 класу Ілюшка. Мені подобається малювати і активно проводити позашкільний час, тому я активно допомагаю школі.",
         "image":"./images/pupil-icons/tkach.jpg",
         "id":"tkach"
     },
@@ -43,39 +43,79 @@
         "firstName":"Владислав",
         "secondName":"Гненний",
         "position":"Оператор та фотограф",
-        "description":"none",
+        "description":"Я Владислав, займаю посаду оператора у раді президента. Люблю займатись фотографією та експериментувати з різними кадрами та ефектами. Сам цікавлюсь історією та правом",
         "image":"./images/pupil-icons/vladyslav.jpg",
         "id":"vladyslav"
+    },
+    {
+        "firstName":"Влада",
+        "secondName":"Гамарник",
+        "position":"SMM Instagram",
+        "description":"Привітик, Я Влада ;) Я є учасницею Ради Президенту й займаюсь веденням шкільного Інстаграму. Велике значення приділяю волонтерству, тому відкриваю збори на підтримку Збройних Сил України та допомагаю у їх розповсюдженні. Завжди рада допомогти оточуючим, чуйна й щира. Свій вільний час приділяю навчанню та саморозвитку, спорту.",
+        "image":"./images/pupil-icons/vlada.jpg",
+        "id":"vlada"
+    },
+    {
+        "firstName":"Максим",
+        "secondName":"Голуб",
+        "position":"ІТ-спеціаліст.",
+        "description":"Привіт, я Максим. Займаюсь програмуванням на Python, C#, цікавлюсь веб-дизайном, монтажем та фотошопом.",
+        "image":"./images/pupil-icons/maxym.jpg",
+        "id":"maxym"
     },
     {
         "firstName":"Анна",
         "secondName":"Сухоставська",
         "position":"Chat-Bot Адмінка",
-        "description":"none",
+        "description":"Всім привіт! Я Анна, і я адмініструю чат-бот нашої школи.",
         "image":"./images/pupil-icons/anna.jpg",
         "id":"anna"
+    },
+    {
+        "firstName":"Марія",
+        "secondName":"Денисенкова",
+        "position":"Журналіст",
+        "description":"Всім привіт! Я Марія, і я журналіст 4 ліцею.",
+        "image":"./images/pupil-icons/manechka.jpg",
+        "id":"manechka"
     },
     {
         "firstName":"Катерина",
         "secondName":"Цехмейструк",
         "position":"SMM Telegram",
-        "description":"none",
+        "description":"Всім привіт! Я Катерина, і я модерую телеграм канал 4 ліцею.",
         "image":"./images/pupil-icons/kateryna.jpg",
         "id":"kateryna"
+    },
+    {
+        "firstName":"Аріна",
+        "secondName":"Коваленко",
+        "position":"Оператор та фотограф",
+        "description":"Привіт, я Аріна. Я шкільний фотограф. Окрім фотографування, я також дуже люблю танцювати, відтворювати і слухати музику. Ще займаюся вивченням іноземних мов. Ну і можу додати що я та людина, яка вміє знаходити позитив та натхнення у всьому)",
+        "image":"./images/pupil-icons/arisha.jpg",
+        "id":"arisha"
     },
     {
         "firstName":"Єлизавета",
         "secondName":"Молдован",
         "position":"Журналіст",
-        "description":"none",
+        "description":"Привіт, мене звати Ліза, я навчаюсь у 9-Д класі та займаю посаду журналіста в Раді Президента нашого ліцею. Люблю активно проводити свій вільний час, тому маю безліч інтересів! Я займаюсь спортом, читаю, вивчаю англійську мову, в'яжу та граю на фортепіано. Завжди відкрита до нових ідей, проєктів та пропозицій",
         "image":"./images/pupil-icons/jelyzaveta.jpg",
         "id":"jelyzaveta"
+    },
+    {
+        "firstName":"Ольга",
+        "secondName":"Стрільчук",
+        "position":"Оператор та фотограф",
+        "description":"Я Ольга Стрільчук, в раді займаю посаду креативщика. Займаюсь народними танцями 10 років в ансамблі танцю 'Радість'.",
+        "image":"./images/pupil-icons/olga.jpg",
+        "id":"olga"
     },
     {
         "firstName":"Дарина",
         "secondName":"Олексенко",
         "position":"Креативщик",
-        "description":"none",
+        "description":"Всім привіт! Я Дарина, і я криативлю.",
         "image":"./images/pupil-icons/daryna.jpg",
         "id":"daryna"
     },
@@ -83,7 +123,7 @@
         "firstName":"Олександра",
         "secondName":"Качура",
         "position":"SMM TikTok",
-        "description":"none",
+        "description":"Всім привіт, я Олександра. Я відповідальна за тік-ток сторінку нашого ліцею.",
         "image":"./images/pupil-icons/oleksandra.jpg",
         "id":"oleksandra"
     },

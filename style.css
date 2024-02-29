@@ -478,7 +478,6 @@ body {
 
 .event img {
     min-width: 100%;
-    height: fit-content;
     border-radius: 10px 10px 0px 0px;
 }
 
