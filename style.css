@@ -515,10 +515,6 @@ body {
     .event {
         width: 90vw;
     }
-
-    .event img {
-        height: fit-content;
-    }
 }
 
 @media screen and (max-width: 690px) {

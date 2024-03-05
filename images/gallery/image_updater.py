@@ -14,7 +14,7 @@ for file in os.listdir(my_path):
                 "path":"./images/gallery/"+file
             })
             i += 1
-
+files.reverse()
 print(files)
 
 with open('images\\gallery\\images.json', 'w') as file:
