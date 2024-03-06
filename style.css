@@ -442,7 +442,6 @@ body {
 
 @media screen and (max-width: 1045px) {
     .photos-grid img {
-        height: fit-content;
         max-width: 95vw;
     }
 
