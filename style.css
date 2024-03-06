@@ -258,6 +258,29 @@ body {
         font-size: 21px;
         padding: 50px;
     }
+
+    .block-2 .block-hr {
+        display: none;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .block-2 {
+        height: 100vh;
+    }
+
+    .block-2 p {
+        font-size: 17px;
+    }
+
+    .block-2 ul {
+        font-size: 18px;
+        padding: 10px 50px;
+    }
+
+    .block-2 .block-hr {
+        display: none;
+    }
 }
 
 /* command */
