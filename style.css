@@ -264,7 +264,7 @@ body {
     }
 }
 
-@media screen and (max-height: 900px) {
+@media screen and (max-height: 900px) and (max-width: 1045px) {
     .block-2 {
         height: 100vh;
     }
