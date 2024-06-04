@@ -519,18 +519,36 @@ body {
     overflow: hidden;
 }
 
+.event .event-date {
+    font-family:'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    margin-bottom: 20px;
+}
+
 .modal-event-img {
     height: 450px;
     width: 450px;
 }
 
 .modal-event-title {
+    margin-left: 10px;
     font-size: 40px;
     color: var(--color1);
+    line-height: 38px;
 }
 
 .modal-event-description{
-    margin-top: 30px;
+    margin-top: 15px;
+    margin-left: 10px;
+}
+
+.modal-event-date {
+    display: block;
+    position: absolute;
+    bottom: 20px;
+    right: 30px;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
+    color: grey;
+    font-size: 17px;
 }
 
 @media screen and (max-width: 1045px) {

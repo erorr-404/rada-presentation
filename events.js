@@ -19,10 +19,17 @@ fetch('./data/news.json')
             let event = document.createElement("div")
             event.classList.add("event")
             event.setAttribute("data-modal-target", "#"+item.id)
-
+            
             event.appendChild(image)
             event.appendChild(title)
             event.appendChild(description)
+
+            if (item.date !== "none") {
+              const date = document.createElement("h3")
+              date.innerHTML = item.date
+              date.classList.add("event-date")
+              event.appendChild(date)
+            }
 
             newsList.appendChild(event)
 
@@ -59,6 +66,13 @@ fetch('./data/news.json')
             modalText.classList.add("text")
             modalText.appendChild(modalShotText)
             modalText.appendChild(modalMainText)
+
+            if (item.date !== "none") {
+              let modalDate = document.createElement("div")
+              modalDate.classList.add("modal-event-date")
+              modalDate.innerHTML = item.date
+              modalText.appendChild(modalDate)
+            }
 
             let modalBody = document.createElement("div")
             modalBody.classList.add("modal-body")
