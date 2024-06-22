@@ -3,7 +3,14 @@
     --color2: #4D4C7D;
     --color3: #F99417;
     --color4: #F5F5F5;
+    --color5: #D8D8D8;
+    --color6: #4B4B4B;
+    
+    --font-family: "Montserrat", sans-serif;
+    --second-family: "Inter", sans-serif;
+    --third-family: "Roboto Condensed", sans-serif;
 }
+
 
 a {
     text-decoration: none;
@@ -13,8 +20,7 @@ a {
 body {
     margin: 0px;
     background-color: var(--color4);
-    font-family: 'Roboto Condensed', sans-serif;
-    
+    font-family: var(--font-family);
 }
 
 /* header */
@@ -27,12 +33,17 @@ body {
     justify-content: space-between;
     color: var(--color4);
     font-size: 20px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
 }
 
 .lyceum-name {
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family);
+    font-weight: 500;
+    letter-spacing: -1.5px;
+    font-size: 32px;
+    color: var(--color-4);
+    text-overflow: clip;
     margin-left: 20px;
-    font-size: 30px;
 }
 
 .lyceum-name:hover {
@@ -42,7 +53,8 @@ body {
 
 .lyceum-name-narrow {
     display: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: var(--font-family);
+    font-weight: 500;
     margin-left: 20px;
     font-size: 30px;
 }
@@ -62,6 +74,11 @@ body {
 .header ul li {
     display: inline-block;
     margin: 0px 10px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 150%;
+    color: var(--color-4);
 }
 
 .header ul li:hover {
@@ -73,6 +90,18 @@ body {
     display: flex;
     flex-direction: row;
     align-items: center;
+
+    border: 1px solid var(--color1);
+    border-radius: 12px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.6);
+    background: var(--color2);
+}
+
+.nav-social-media a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0px;
 }
 
 .nav-social-media img {
@@ -175,6 +204,12 @@ body {
     position: relative;
     z-index: 3;
     margin: 0px;
+
+    font-family: var(--third-family);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    color: var(--color-4);
+    text-shadow: 5px 5px 4px rgba(0, 0, 0, 0.4);
 }
 
 .block-1 h1:last-of-type {
@@ -188,14 +223,18 @@ body {
     size: 20px;
 }
 
-.block-2::before {
+.hr-new {
+    z-index: 3;
+}
+
+/* .block-2::before {
     content: "👇";
     position: absolute;
     z-index: 3;
     font-size: 60px;
     bottom: 26px;
     right: 6px;
-}
+} */
 
 .block-2 {
     height: 91vh;
@@ -207,12 +246,21 @@ body {
 
 .block-2 h2 {
     margin: 0px;
-    font-size: 100px;
+    font-family: var(--third-family);
+    font-weight: 700;
+    font-size: 96px;
     color: var(--color2);
 }
 
 .block-2 p {
+    margin-top: 90px;
+    margin-bottom: 60px;
     padding: 0px 40px;
+
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
 }
 
 .block-2 ul {
@@ -220,6 +268,12 @@ body {
     padding: 0px 100px;
     font-size: 1.5em;
     font-style: italic;
+
+    font-family: var(--font-family);
+    font-style: italic;
+    font-weight: 400;
+    font-size: 24px;
+    color: #fff;
 }
 
 @media screen and (max-width: 1045px) {
