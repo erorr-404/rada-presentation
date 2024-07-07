@@ -118,7 +118,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1170px) {
     .lyceum-name-narrow {
         display: block;
     }
@@ -244,6 +244,12 @@ body {
     color: var(--color4);
 }
 
+@media screen and (max-width: 1170px) {
+    .block-2 {
+        height: fit-content;
+    }
+}
+
 .block-2 h2 {
     margin: 0px;
     font-family: var(--third-family);
@@ -276,7 +282,7 @@ body {
     color: #fff;
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1170px) {
     .block-1-h1-text {
         font-size: 30px;
         padding: 20px;
@@ -318,7 +324,7 @@ body {
     }
 }
 
-@media screen and (max-height: 900px) and (max-width: 1045px) {
+@media screen and (max-height: 900px) and (max-width: 1170px) {
     .block-2 {
         height: 100vh;
     }
@@ -384,6 +390,12 @@ body {
     flex-direction: row;
 }
 
+@media screen and (max-width: 1170px) {
+    .person {
+        width: fit-content;
+    }
+}
+
 .person img {
     height:210px;
     border-radius: 10px;
@@ -422,7 +434,7 @@ body {
     width: 100%;
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1170px) {
     .h1-container h1 {
         font-size: 50px;
     }
@@ -451,7 +463,7 @@ body {
     transition: all .5s ease-in-out;
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1170px) {
     .photos-grid img {
         max-width: 95vw;
     }
@@ -523,9 +535,6 @@ body {
 }
 
 .date-container {
-    position: relative;
-    /* bottom: 10px; */
-    left: 22vw;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -572,12 +581,24 @@ body {
     /*max-width: 80%;*/
     display: grid;
     grid-template-rows: 1fr 12fr;
-  }
-  
+}
+
+@media screen and (max-width: 1170px) {
+    .modal {
+        height: fit-content;
+        max-height: 90vh;
+    }
+
+    .modal-body {
+        overflow: scroll;
+    }
+    
+}
+
 .modal.active {
     transform: translate(-50%, -50%) scale(1);
 }
-  
+
 .modal-header {
     padding: 10px 15px;
     display: flex;
@@ -588,7 +609,7 @@ body {
     box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.4);
     border-radius: 10px 10px 0px 0px;
 }
-  
+
 .modal-header .title {
     font-size: 2rem;
     font-weight: bold;
@@ -678,7 +699,7 @@ body {
     color: #000;
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1170px) {
     .event {
         width: 90vw;
     }
@@ -691,11 +712,51 @@ body {
 
     .modal-body {
         flex-direction: column;
+        overflow-y: scroll;
     }
 
     .modal-body img {
         width: 100%;
         height: fit-content;
+    }
+
+    .modal-images-frame {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 3fr 1fr;
+        row-gap: 10px;
+        column-gap: 10px;
+        height: 30vh;
+    }
+    
+    .modal-event-img {
+        grid-column: 1 / 4;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    
+    .modal-sub-img {
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+@media screen and (max-width: 1170px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+        overflow-y: auto;
+    }
+
+    .modal-images-frame {
+        grid-row: 1 / 2;
+        grid-column: 1 / 2;
+    }
+
+    .modal-body .text {
+        grid-row: 2 / 3;
+        grid-column: 1 / 2;
     }
 }
 
@@ -708,6 +769,7 @@ body {
     justify-content: space-around;
     /* margin: 20px 20vh; */
     margin-bottom: 40px;
+    flex-wrap: wrap;
 }
 
 .person-contacts {
@@ -717,6 +779,14 @@ body {
     border: 1px solid var(--color6);
     border-radius: 12px;
     padding: 28px;
+}
+
+.person-contacts {
+    border: 1px solid var(--color-6);
+    border-radius: 12px;
+    padding: 52px;
+    width: 509px;
+    height: 1085px;
 }
 
 .person-contacts h2, h3, h4 {
@@ -772,7 +842,7 @@ body {
     margin-top: 16px;
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1170px) {
     .contacts-container {
         flex-direction: column;
         margin: 10px;
@@ -782,7 +852,6 @@ body {
     .person-contacts {
         display: flex;
         flex-direction: column;
-        align-items: center;
         margin-top: 50px;
     }
 
@@ -814,7 +883,7 @@ body {
     margin: 0px 20px;
 }
 
-@media screen and (max-width: 1045px) {
+@media screen and (max-width: 1170px) {
     span {
         font-size: 10px;
     }
