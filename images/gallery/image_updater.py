@@ -1,6 +1,8 @@
 import os
 import json
 
+# images size: 1280x960
+
 alowed_types = [".jpg", ".png", ".webp", ".jpeg"]
 files = []
 i = 1

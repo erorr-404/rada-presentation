@@ -7,8 +7,9 @@ fetch('./data/news.json')
         const body = document.getElementById("doc-body")
 
         json.forEach(item => {
-            let image = document.createElement("img")
-            image.src = item.image
+            let image = document.createElement("div")
+            image.classList.add("event-image")
+            image.style.backgroundImage = `url(${item.image})`
 
             let title = document.createElement("h2")
             title.innerHTML = item.title
@@ -25,10 +26,19 @@ fetch('./data/news.json')
             event.appendChild(description)
 
             if (item.date !== "none") {
+              const dateContainer = document.createElement("div")
+              dateContainer.classList.add("date-container")
+
+              const dateSVG = document.createElement("img")
+              dateSVG.src = "./images/calendar.svg"
+
               const date = document.createElement("h3")
               date.innerHTML = item.date
               date.classList.add("event-date")
-              event.appendChild(date)
+
+              dateContainer.appendChild(dateSVG)
+              dateContainer.appendChild(date)
+              event.appendChild(dateContainer)
             }
 
             newsList.appendChild(event)
@@ -49,10 +59,24 @@ fetch('./data/news.json')
             modalHeader.appendChild(modalTitle)
             modalHeader.appendChild(modalCloseButton)
 
-
-            let modalPhoto = document.createElement("img")
+            let modalPhoto = document.createElement("div")
             modalPhoto.classList.add("modal-event-img")
-            modalPhoto.src = item.image
+            modalPhoto.style.backgroundImage = `url("${item.image}")`
+
+            let subImages = []
+            item.subImages.forEach(subImgPath => {
+              let subImg = document.createElement("div")
+              subImg.classList.add("modal-sub-img")
+              subImg.style.backgroundImage = `url("${subImgPath}")`
+              subImages.push(subImg)
+            })
+
+            let imagesFrame = document.createElement("div")
+            imagesFrame.classList.add("modal-images-frame")
+            imagesFrame.appendChild(modalPhoto)
+            subImages.forEach(item => {
+              imagesFrame.appendChild(item)
+            })
 
             let modalShotText = document.createElement("div")
             modalShotText.classList.add("modal-event-title")
@@ -65,7 +89,6 @@ fetch('./data/news.json')
             let modalText = document.createElement("div")
             modalText.classList.add("text")
             modalText.appendChild(modalShotText)
-            modalText.appendChild(modalMainText)
 
             if (item.date !== "none") {
               let modalDate = document.createElement("div")
@@ -73,10 +96,14 @@ fetch('./data/news.json')
               modalDate.innerHTML = item.date
               modalText.appendChild(modalDate)
             }
+            
+            modalText.appendChild(modalMainText)
+
+            
 
             let modalBody = document.createElement("div")
             modalBody.classList.add("modal-body")
-            modalBody.appendChild(modalPhoto)
+            modalBody.appendChild(imagesFrame)
             modalBody.appendChild(modalText)
 
             let modal = document.createElement("div")

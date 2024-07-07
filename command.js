@@ -67,6 +67,7 @@ fetch('./data/members.json')
 
             let modalBody = document.createElement("div")
             modalBody.classList.add("modal-body")
+            modalBody.classList.add("user-modal")
             modalBody.appendChild(modalMemberPhoto)
             modalBody.appendChild(modalText)
 
