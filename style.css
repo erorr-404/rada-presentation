@@ -118,7 +118,7 @@ body {
     display: none;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .lyceum-name-narrow {
         display: block;
     }
@@ -244,7 +244,7 @@ body {
     color: var(--color4);
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .block-2 {
         height: fit-content;
     }
@@ -282,7 +282,11 @@ body {
     color: #fff;
 }
 
-@media screen and (max-width: 1170px) {
+.block-2 li {
+    padding-left: .5ch;
+}
+
+@media screen and (max-width: 1200px) {
     .block-1-h1-text {
         font-size: 30px;
         padding: 20px;
@@ -311,7 +315,8 @@ body {
 
     .block-2 p {
         font-size: 20px;
-        text-align: justify;
+        text-align: center;
+        margin-bottom: 3ch;
     }
 
     .block-2 ul {
@@ -324,7 +329,7 @@ body {
     }
 }
 
-@media screen and (max-height: 900px) and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .block-2 {
         height: 100vh;
     }
@@ -336,6 +341,10 @@ body {
     .block-2 ul {
         font-size: 18px;
         padding: 10px 50px;
+    }
+
+    .block-2 li {
+        margin-bottom: 1ch;
     }
 
     .block-2 .block-hr {
@@ -390,7 +399,7 @@ body {
     flex-direction: row;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .person {
         width: fit-content;
     }
@@ -434,9 +443,25 @@ body {
     width: 100%;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .h1-container h1 {
         font-size: 50px;
+    }
+
+    .person img {
+        border: 5px solid var(--color3);
+    }
+
+    .person:hover {
+        transition: none;
+        transform: none;
+    }
+
+    .modal-body img {
+        max-height: 30vh;
+        max-width: none;
+        height: 35vh;
+        width: auto;
     }
 }
 
@@ -463,7 +488,7 @@ body {
     transition: all .5s ease-in-out;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .photos-grid img {
         max-width: 95vw;
     }
@@ -545,6 +570,12 @@ body {
     box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.6);
 }
 
+@media screen and (max-width: 1200px) {
+    .event .event-image {
+        background-position: center;
+    }
+}
+
 /* event modal */
 
 #overlay{
@@ -583,7 +614,7 @@ body {
     grid-template-rows: 1fr 12fr;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .modal {
         height: fit-content;
         max-height: 90vh;
@@ -699,13 +730,13 @@ body {
     color: #000;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .event {
         width: 90vw;
     }
 }
 
-@media screen and (max-width: 690px) {
+@media screen and (max-width: 767px) {
     .modal {
         width: 90vw;
     }
@@ -715,10 +746,10 @@ body {
         overflow-y: scroll;
     }
 
-    .modal-body img {
+    /* .modal-body img {
         width: 100%;
         height: fit-content;
-    }
+    } */
 
     .modal-images-frame {
         display: grid;
@@ -742,7 +773,7 @@ body {
     }
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .modal-body {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
@@ -834,7 +865,7 @@ body {
     margin-top: 16px;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     .contacts-container {
         flex-direction: column;
         margin: 10px;
@@ -875,7 +906,7 @@ body {
     margin: 0px 20px;
 }
 
-@media screen and (max-width: 1170px) {
+@media screen and (max-width: 1200px) {
     span {
         font-size: 10px;
     }
