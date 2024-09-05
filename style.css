@@ -818,7 +818,7 @@ body {
 
 .profile-photo {
     /* stroke: 5px dashed var(--color3); */
-    width: 360px;
+    width: auto;
     height: 330px;
     /* box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.6); */
     background-repeat: no-repeat;
@@ -876,6 +876,13 @@ body {
         display: flex;
         flex-direction: column;
         margin-top: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: calc(100vw - 97px);
+    }
+
+    .profile-photo {
+        height: 31vh;
     }
 
     .person-contacts h2 {
