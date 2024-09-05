@@ -819,10 +819,11 @@ body {
 .profile-photo {
     /* stroke: 5px dashed var(--color3); */
     width: auto;
-    height: 330px;
+    height: 31vh;
     /* box-shadow: 4px 4px 4px 0 rgba(0, 0, 0, 0.6); */
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
 }
 
 .profile-photo.egor {
