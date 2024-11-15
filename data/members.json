@@ -110,5 +110,21 @@
         "description":"Всім привіт! Я Дар'я, і я креативщиця 4 ліцею.",
         "image":"./images/pupil-icons/darja.jpg",
         "id":"darja"
+    },
+    {
+        "firstName":"Анна",
+        "secondName":"Комар",
+        "position":"SMM Instagram",
+        "description":"Всім привіт! Я Анна, займаюсь монтажем протягом 5 років.",
+        "image":"./images/pupil-icons/komar.jpg",
+        "id":"komar"
+    },
+    {
+        "firstName":"Поліна",
+        "secondName":"Кузьмич",
+        "position":"Жарналіст",
+        "description":"Всім привіт! Я Дар'я, займаюся журналістикою більше 3 років.",
+        "image":"./images/pupil-icons/polina.jpg",
+        "id":"polina"
     }
 ]
