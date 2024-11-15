@@ -12,8 +12,8 @@ for file in os.listdir(my_path):
     if os.path.isfile(os.path.join(my_path, file)):
         if file.endswith(".jpg") or file.endswith(".png") or file.endswith(".webp") or file.endswith(".jpeg"):
             files.append({
-                "id":i,
-                "path":"./images/gallery/"+file
+                "id": i,
+                "path": "./images/gallery/"+file
             })
             i += 1
 files.reverse()
