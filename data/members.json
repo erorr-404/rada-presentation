@@ -82,7 +82,7 @@
     {
         "firstName":"Ольга",
         "secondName":"Стрільчук",
-        "position":"Креативщиця",
+        "position":"Журналістка",
         "description":"Я Ольга Стрільчук, в раді займаю посаду креативщиці. Займаюсь народними танцями 10 років в ансамблі танцю 'Радість'.",
         "image":"./images/pupil-icons/olga.jpg",
         "id":"olga"
@@ -122,9 +122,25 @@
     {
         "firstName":"Поліна",
         "secondName":"Кузьмич",
-        "position":"Жарналіст",
+        "position":"Жарналістка",
         "description":"Всім привіт! Я Дар'я, займаюся журналістикою більше 3 років.",
         "image":"./images/pupil-icons/polina.jpg",
         "id":"polina"
+    },
+    {
+        "firstName":"Поліна",
+        "secondName":"Коваленко",
+        "position":"Жарналістка",
+        "description":"Професійно займаюсь плаванням. Хочу ділитись своїм креативом з іншими та допомагати розвивати майбутнє нашого ліцею))",
+        "image":"./images/pupil-icons/polina_k.jpg",
+        "id":"polina_k"
+    },
+    {
+        "firstName":"Ілля",
+        "secondName":"Добровольський",
+        "position":"Оператор та фотограф",
+        "description":"Всім привіт! Я Ілля і я журналіст. На данний момент є 2-х разовим срібним призером Чемпіонату Світу з кікбоксингу ISKA.",
+        "image":"./images/pupil-icons/illia_d.jpg",
+        "id":"illia_d"
     }
 ]

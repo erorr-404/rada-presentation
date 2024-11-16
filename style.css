@@ -392,11 +392,11 @@ body {
     margin: 20px;
     cursor: pointer;
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
     align-content: center;
     justify-content: center;
-    flex-direction: row;
+    flex-direction: column;
 }
 
 @media screen and (max-width: 1200px) {
