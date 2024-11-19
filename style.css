@@ -172,6 +172,12 @@ body {
 
 /* index */
 
+.block {
+    height: 75vh;
+    width: 100vw;
+    padding: 1em;
+}
+
 .block-1 {
     background-image: url(https://cdn4.suspilne.media/images/resize/1020x1.78/3870680f2cb9dc97.jpg);
     background-repeat: no-repeat;
@@ -397,13 +403,14 @@ body {
     align-content: center;
     justify-content: center;
     flex-direction: column;
+    min-width: 200px;
 }
-
+/* 
 @media screen and (max-width: 1200px) {
     .person {
-        width: fit-content;
+        width: 90rem;
     }
-}
+} */
 
 .person img {
     height:210px;
@@ -416,7 +423,7 @@ body {
 .person h2 {
     font-family: var(--font-family);
     font-weight: 600;
-    font-size: 36px;
+    font-size: 28px;
     text-align: center;
     color: #2a2a2a;
 }
@@ -424,7 +431,7 @@ body {
 .person h3 {
     font-family: var(--font-family);
     font-weight: 300;
-    font-size: 24px;
+    font-size: 20px;
     text-align: center;
     color: #000;
 }
@@ -531,7 +538,7 @@ body {
 
 .event-image {
     border: 6px dashed var(--color3);
-    width: 100%;
+    width: calc(100% - 16px);
     border-radius: 12px;
     min-height: 270px;
     background-repeat: no-repeat;
@@ -582,7 +589,7 @@ body {
     content: "";
     background-color: var(--color2);
     position: fixed;
-    z-index: 10;
+    z-index: 1;
     opacity: 0%;
     top: 0;
     left: 0;
@@ -596,13 +603,17 @@ body {
     pointer-events: all;
 }
 
+.modal-active {
+    overflow-y: hidden;
+}
+
 .modal {
     position: fixed;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(0);
     transition: 320ms ease-in-out;
-    z-index: 10;
+    z-index: 2;
     box-shadow: 8px 4px 4px 0 rgba(0, 0, 0, 0.5);
     background: #d9d9d9;
     border: 2px solid var(--color6);
@@ -614,16 +625,15 @@ body {
     grid-template-rows: 1fr 12fr;
 }
 
+.modal-body {
+    overflow-y: scroll;
+}
+
 @media screen and (max-width: 1200px) {
     .modal {
         height: fit-content;
         max-height: 90vh;
     }
-
-    .modal-body {
-        overflow: scroll;
-    }
-    
 }
 
 .modal.active {
@@ -686,7 +696,7 @@ body {
 
 .modal-body .text {
     padding: 10px;
-    overflow-y: hidden;
+    /* overflow-y: hidden; */
 }
 
 .modal-body .text .name {
@@ -918,4 +928,4 @@ body {
     span {
         font-size: 10px;
     }
-}
+}   
