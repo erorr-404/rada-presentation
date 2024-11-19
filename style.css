@@ -25,7 +25,7 @@ body {
 
 /* header */
 
-.header {
+header {
     background-color: var(--color3);
     height: 50px;
     display: flex;
@@ -59,11 +59,11 @@ body {
     font-size: 30px;
 }
 
-.header img {
+header img {
     height: 50px;
 }
 
-.header ul {
+header ul {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -71,7 +71,7 @@ body {
     margin: 0px;
 }
 
-.header ul li {
+header ul li {
     display: inline-block;
     margin: 0px 10px;
     font-family: var(--second-family);
@@ -81,7 +81,7 @@ body {
     color: var(--color4);
 }
 
-.header ul li:hover {
+header ul li:hover {
     color: var(--color2);
     transition: all .25s ease
 }
@@ -127,7 +127,7 @@ body {
         display: none;
     }
 
-    .header ul {
+    header ul {
         display: none;
     }
 
@@ -911,7 +911,7 @@ body {
 
 /* footer */
 
-.footer {
+footer {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -920,7 +920,7 @@ body {
     background-color: var(--color3);
 }
 
-.footer span {
+footer span {
     margin: 0px 20px;
 }
 
