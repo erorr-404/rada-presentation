@@ -1,122 +1,52 @@
 fetch('./data/members.json')
     .then((response) => response.json())
     .then((json) => {
-        const overlay = document.getElementById("overlay")
-        //const overlay = window.getComputedStyle(document.querySelector(".table-container"), ":after")
-        const body = document.getElementById("doc-body")
-
-        console.log(json)
-        const list = document.getElementById("memberTable")
+        const main = document.getElementById("main")
 
         json.forEach(item => {
-            let img = document.createElement("img")
-            img.src = item.image
+            const name = item.secondName + " " + item.firstName
+            const position = item.position
+            const bio = item.description
+            const img = item.image
+            const id = item.id
 
-            let h2 = document.createElement("h2")
-            h2.innerText = item.secondName + " " + item.firstName
+            const profile_card = `
+            <div class="card shadow" style="width: 18rem;">
+                <img src="${img}" class="card-img-top" alt="${name}">
+                <div class="card-body">
+                    <h5 class="card-title">${name}</h5>
+                    <h6 class="card-subtitle mb-2 text-body-secondary">${position}</h6>
+                    <p class="card-text text-truncate">${bio}</p>
+                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#${id}">Детальніше</button>
+                </div>
+            </div>
+            `
 
-            let h3 = document.createElement("h3")
-            h3.innerText = item.position
+            const profile_modal = `
+            <div class="modal fade" id="${id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5">Інформація про учасника</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <img src="${img}" class="img-fluid my-2 rounded" alt="${name}">
+                            <h5>${name}</h5>
+                            <h6 class="mb-2 text-body-secondary">${position}</h6>
+                            <p>${bio}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            `
 
-            let member = document.createElement("div")
-            member.classList.add("person")
-            member.setAttribute("data-modal-target", "#"+item.id)
-
-            member.appendChild(img)
-            member.appendChild(h2)
-            member.appendChild(h3)
-            list.appendChild(member)
-
-            //user modal
-
-            let modalTitle = document.createElement("div")
-            modalTitle.classList.add("title")
-            modalTitle.innerText = "Інформація"
-
-            let modalCloseButton = document.createElement("button")
-            modalCloseButton.setAttribute("data-close-button", null)
-            modalCloseButton.classList.add("close-button")
-            modalCloseButton.innerText = "×"
-
-            let modalHeader = document.createElement("div")
-            modalHeader.classList.add("modal-header")
-            modalHeader.appendChild(modalTitle)
-            modalHeader.appendChild(modalCloseButton)
-
-
-            let modalMemberPhoto = document.createElement("img")
-            modalMemberPhoto.src = item.image
-
-            let modalMemberName = document.createElement("div")
-            modalMemberName.classList.add("name")
-            modalMemberName.innerText = item.secondName + " " + item.firstName
-
-            let modalMemberPosition = document.createElement("div")
-            modalMemberPosition.classList.add("member-position")
-            modalMemberPosition.innerText = item.position
-
-            let modalMemberDescription = document.createElement("div")
-            modalMemberDescription.classList.add("description")
-            modalMemberDescription.innerText = item.description
-
-            let modalText = document.createElement("div")
-            modalText.classList.add("text")
-            modalText.appendChild(modalMemberName)
-            modalText.appendChild(modalMemberPosition)
-            modalText.appendChild(modalMemberDescription)
-
-            let modalBody = document.createElement("div")
-            modalBody.classList.add("modal-body")
-            modalBody.classList.add("user-modal")
-            modalBody.appendChild(modalMemberPhoto)
-            modalBody.appendChild(modalText)
-
-            let modal = document.createElement("div")
-            modal.setAttribute("id", item.id)
-            modal.classList.add("modal")
-            modal.appendChild(modalHeader)
-            modal.appendChild(modalBody)
-
-            body.appendChild(modal)
-        });
-        const openModalButtons = document.querySelectorAll('[data-modal-target]')
-        const closeModalButtons = document.querySelectorAll('[data-close-button]')
-        console.log(openModalButtons, closeModalButtons);
-
-        openModalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-              const modal = document.querySelector(button.dataset.modalTarget)
-              openModal(modal)
-            })
+            const parser = new DOMParser()
+            const card = parser.parseFromString(profile_card, "text/html")
+            const modal = parser.parseFromString(profile_modal, "text/html")
+            
+            main.appendChild(card.body.firstChild)
+            main.appendChild(modal.body.firstChild)
         })
 
-        overlay.addEventListener('click', () => {
-            const modals = document.querySelectorAll('.modal.active')
-            modals.forEach(modal => {
-              closeModal(modal)
-            })
-        })
-
-        closeModalButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            const modal = button.closest('.modal')
-            closeModal(modal)
-          })
-        })
-
-        function openModal(modal) {
-            if (modal == null) return
-            modal.classList.add('active')
-            overlay.classList.add('active')
-            body.classList.add("modal-active")
-          }
-      
-          function closeModal(modal) {
-            if (modal == null) return
-            modal.classList.remove('active')
-            overlay.classList.remove('active')
-            body.classList.remove("modal-active")
-          }
-
-    });
-
+    })
