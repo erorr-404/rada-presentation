@@ -1,176 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link rel="shortcut icon" href="./images/rada-emblema.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@600&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Рада Президента - Офіційний Сайт</title>
-    <script defer src="./index.js"></script>
-</head>
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-PHPYN4R77F"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-PHPYN4R77F');
-</script>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="assets/icons/rada-emblema.ico" type="image/x-icon">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="/scss/vars.css">
+  <link rel="stylesheet" href="style.css">
+  <title>Рада президента</title>
+</head>
+
 <body>
-    <header>
-        <div class="lyceum-name">
-            <a href="http://vl4.edu.vn.ua">
-                Вінницький ліцей №4
-            </a>
+  <nav class="navbar navbar-expand-lg bg-primary fixed-top">
+    <div class="container-fluid mx-auto">
+      <a class="navbar-brand mx-auto text-light fw-semibold" href="http://sch4.edu.vn.ua/">
+        <img src="/assets/icons/vl4-icon.svg" alt="Logo" width="24" height="24" class="d-inline-block align-text-top rounded-circle">
+        ВЛ №4
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse mx-auto" id="navbarNavAltMarkup">
+        <div class="navbar-nav mx-auto fw-medium">
+          <a class="nav-link disabled" href="#">Головна</a>
+          <a class="nav-link text-light" href="command.html">Команда</a>
+          <a class="nav-link text-light" href="gallery.html">Галерея</a>
+          <a class="nav-link text-light" href="events.html">Заходи</a>
         </div>
-        <div class="lyceum-name-narrow">
-            <a href="http://vl4.edu.vn.ua">
-                ВЛ №4
-            </a>
+        <div class="navbar-nav sm-icons mr-1 text-light">
+          <a class="nav-link text-light" href="https://www.youtube.com/@TV4youLyceum"><i class="fa-brands fa-youtube"></i></a>
+          <a class="nav-link text-light" href="https://t.me/lyceum_mendeleeva_4"><i class="fa-brands fa-telegram"></i></a>
+          <a class="nav-link text-light" href="https://www.instagram.com/lyceum_4_vn?igsh=NDllMjN3aW04a2hq"><i class="fa-brands fa-instagram"></i></a>
+          <a class="nav-link text-light" href="https://www.facebook.com/groups/380439659762353"><i class="fa-brands fa-facebook"></i></a>
         </div>
-        <ul class="nav-bar-list">
-            <li>
-                <a href="./index.html">Головна</a>
-            </li>
-            <li>
-                <a href="./comand.html">Команда</a>
-            </li>
-            <li>
-                <a href="./gallery.html">Галерея</a>
-            </li>
-            <li>
-                <a href="./events.html">Заходи</a>
-            </li>
-            <li>
-                <a href="./contacts.html">Контакти</a>
-            </li>
-            <li>
-                <div class="nav-social-media">
-                    <a href="https://www.youtube.com/@TV4youLyceum">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3938/3938026.png" alt="youtube">
-                    </a>
-                    <a href="https://t.me/lyceum_mendeleeva_4">
-                        <img src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/telegram-512.png" alt="telegram">
-                    </a>
-                    <a href="https://www.instagram.com/lyceum_4_vn?igsh=NDllMjN3aW04a2hq">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="instagram">
-                    </a>
-                    <a href="https://www.facebook.com/groups/380439659762353">
-                        <img src="https://static-00.iconduck.com/assets.00/facebook-icon-512x512-seb542ju.png" alt="facebook">
-                    </a>
-                    <a href="https://t.me/lyceum4vn_bot">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-bot-138-505021.png" alt="bot">
-                    </a>
-                    <a href="https://www.tiktok.com/@lyceum4.vn?is_from_webapp=1&sender_device=pc">
-                        <img src="images/tiktok.png" alt="tiktok">
-                    </a>
-                </div>
-            </li>
-        </ul>
-        <div id="menu-button" class="menu-icon">
-            <img src="./images/menu-icon.png" alt="menu">
-        </div>
-    </header>
-    <div id="mobile-menu" class="mobile-menu">
-        <ul class="nav-bar-list">
-            <li>
-                <a href="./index.html">Головна</a>
-            </li>
-            <li>
-                <a href="./comand.html">Команда</a>
-            </li>
-            <li>
-                <a href="./gallery.html">Галерея</a>
-            </li>
-            <li>
-                <a href="./events.html">Заходи</a>
-            </li>
-            <li>
-                <a href="./contacts.html">Контакти</a>
-            </li>
-            <li>
-                <div class="nav-social-media">
-                    <a href="https://www.youtube.com/@TV4youLyceum">
-                        <img src="https://cdn-icons-png.flaticon.com/512/3938/3938026.png" alt="youtube">
-                    </a>
-                    <a href="https://t.me/lyceum_mendeleeva_4">
-                        <img src="https://cdn3.iconfinder.com/data/icons/social-media-chamfered-corner/154/telegram-512.png" alt="telegram">
-                    </a>
-                    <a href="https://www.instagram.com/lyceum_4_vn?igsh=NDllMjN3aW04a2hq">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a5/Instagram_icon.png/600px-Instagram_icon.png" alt="instagram">
-                    </a>
-                    <a href="https://www.facebook.com/groups/380439659762353">
-                        <img src="https://static-00.iconduck.com/assets.00/facebook-icon-512x512-seb542ju.png" alt="facebook">
-                    </a>
-                    <a href="https://t.me/lyceum4vn_bot">
-                        <img src="https://cdn.iconscout.com/icon/free/png-256/free-bot-138-505021.png" alt="bot">
-                    </a>
-                    <a href="https://www.tiktok.com/@lyceum4.vn?is_from_webapp=1&sender_device=pc">
-                        <img src="images/tiktok.png" alt="tiktok">
-                    </a>
-                </div>
-            </li>
-        </ul>
+      </div>
     </div>
-    <main>
-        <div class="block-1">
-            <div class="block-1-h1-text">
-                <h1>
-                    Рада
-                </h1>
-                <h1>
-                    Президента
-                </h1>
-                <h1> 
-                    ліцею №4
-                </h1>
-                <!-- <hr class="block-hr"> -->
-                <!-- <svg class="hr-new" width="100%" height="6" viewBox="0 0 100% 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <rect width="40%" height="6" fill="#D9D9D9" />
-                    <rect x="960" width="40%" height="6" fill="#D9D9D9" />
-                </svg> -->
-            </div>
+  </nav>
+  <main>
+    
+    <div style="height: 56px;"></div>
+    
+    <div id="block-1" class="container-fluid m-0 p-1 text-primary">
+      <div id="block-1-child" class="col-md-6 mx-auto my-5 p-lg-5">
+        <h1 class="display-3 fw-bold text-center">Рада <br> Президента</h1>
+        <h3 class="fw-normal mb-3 mx-3 text-center text-light">Учнівське самоврядування ВЛ №4</h3>
+        <div id="arrows" class="d-flex gap-3 justify-content-around align-items-center flex-nowrap lead fw-normal arrows">
+          <a class="icon-link mx-2" href="command.html">
+            Команда
+          </a>
+          <span class="text-light text-nowrap">← Дізнайся більше →</span>
+          <a class="icon-link mx-2" href="#">
+            Заходи
+          </a>
         </div>
-        <div class="block-2">
-            <h2>
-                Які наші обов'язки?
-            </h2>
-            <p>
-                Ми - Рада Президента Вінницького ліцею №4. Наші члени - найкращі учні в школі. Ми самостійно ведемо сторінки В Instagram, Youtube, Tik-Tok, Telegram. Також наші програмісти створили телеграм-бота для швидкого та легкого отримання потрібної інформації. Кожного святкового дня, ми провидимо цікаві активності для наших учнів. Крім цього, ми відповідальні за:
-            </p>
-            <ul>
-                <li>
-                    Проводити цікаві активності для учнів
-                </li>
-                <li>
-                    Розробляти квести для урізноманітнення шкільного життя
-                </li>
-                <li>
-                    Організовувати захоплюючі конкурси
-                </li>
-                <li>
-                    Проводити створювати челенджі
-                </li>
-            </ul>
-            <!-- <hr class="block-hr"> -->
+      </div>
+    </div>
+
+    <div class="row p-5">
+      <div class="col-md-7 d-flex flex-column justify-content-center">
+        <h2 class="fw-normal lh-1 mb-3 mt-auto">
+          Які наші обов'язки?
+         </h2>
+        <p class="lead fw-medium">Ми - Рада Президента Вінницького ліцею №4. Наші члени - найкращі учні в школі. Ми самостійно ведемо сторінки В Instagram, Youtube, Tik-Tok, Telegram. Кожного святкового дня, ми провидимо цікаві активності для наших учнів. Також, ми відповідальні за:</p>
+        <em>
+          <ul class="lead mb-4">
+            <li>Проведення цікавих активностей для учнів </li>
+            <li>Розробку квестів для урізноманітнення шкільного життя</li>
+            <li>Організування захоплюючих конкурсів</li>
+            <li>Створення челенджів</li>
+         </ul>
+        </em>
+      </div>
+      <div class="col-md-5 my-auto d-flex">
+        <img class="shadow bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" src="/assets/gallery/trening1.png" alt="">
+      </div>
+    </div>
+
+    <hr class="mx-5">
+
+    <div class="container-fluid px-5">
+      <h2 class="text-center my-4">Наші лідери</h2>
+      <div class="row">
+        <div class="col-lg-4 text-center my-4">
+          <img class="img-fluid object-fit-cover rounded-circle shadow" width="200px" src="assets/members/egor.jpg" alt="Maria">
+          <h2 class="mt-2">Лемещак Єгор</h2>
+          <h5 class="mb-2">Заступник Президента</h5>
+          <p>Хело, мене звати Єгор. Я заступник президентки ліцею і громадський діяч. Реалізовую свій проєкт і допомагаю в організації різних заходів. Представляю школу на міському рівні. Координую волонтерський центр.</p>
+          <a href="#" class="btn btn-primary insta-gradient border-0 shadow">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
         </div>
-    </main>
-    <footer>
-        <span>
-            Виникла проблема? - Звертайтесь в телеграм: <a href="https://t.me/erorrrrr404">@erorrrrr404</a>
-        </span>
-        <span>
-            <a href="https://www.youtube.com/watch?v=A67ZkAd1wmI">
-                Сайт зробив Erorr©
-            </a>
-        </span>
-    </footer>
+        <div class="col-lg-4 text-center my-4">
+          <img class="img-fluid object-fit-cover rounded-circle shadow" width="200px" src="assets/members/masha.jpg" alt="Maria">
+          <h2 class="mt-2">Гресько Марія</h2>
+          <h5 class="mb-2">Президент</h5>
+          <p>Усім привітик! 🤗 Я Марія і я є Президенткою ліцею №4. Займаюсь активною громадською та волонтерською діяльністю. Відстоюю права наших учнів. Організовую різні заходи, тренінги, марафони та форуми на міському рівні, але звичайно ж не забуваю і про наш ліцей. Завжди готова допомогти вам та вислухати цікаві пропозиції!</p>
+          <a href="#" class="btn btn-primary insta-gradient border-0 shadow">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+        </div>
+        <div class="col-lg-4 text-center my-4">
+          <img class="img-fluid object-fit-cover rounded-circle shadow" width="200px" src="assets/members/sergiy.jpg" alt="Maria">
+          <h2 class="mt-2">Музичук Сергій</h2>
+          <h5 class="mb-2">Заступник Президента</h5>
+          <p>Сергій, заступник президентки ліцею, шкільний та міський омбудсмен. Я зацікавлений у вивченні інформаційних технологій, права, філософії та психології. Постійно розвиваю свої знання та навички, завдяки чому стаю все більш компетентним у своїй галузі.</p>
+          <a href="#" class="btn btn-primary insta-gradient border-0 shadow">
+            <i class="fa-brands fa-instagram"></i>
+            Instagram
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </main>
+  <footer class="p-2 bg-primary text-light">
+    <span class="fw-medium">Created by: <a class="text-light" href="#"><i class="fa-brands fa-instagram"></i> Erorr404</a> </span>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/f703bf9d30.js" crossorigin="anonymous"></script>
 </body>
 </html>

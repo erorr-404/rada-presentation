@@ -1,157 +1,81 @@
-fetch('./data/news.json')
-    .then((response) => response.json())
-    .then((json) => {
-        console.log(json)
-        const overlay = document.getElementById("overlay")
-        const newsList = document.getElementById("events-container")
-        const body = document.getElementById("doc-body")
+$.getJSON("data/news.json", function (data) {
+  const mainContainer = $("#events-main");
 
-        json.forEach(item => {
-            let image = document.createElement("div")
-            image.classList.add("event-image")
-            image.style.backgroundImage = `url(${item.image})`
+  data.forEach(event => {
+    const title = event.title
+    const mainText = event.description
+    const image = event.image
+    const subImages = event.subImages
+    const date = event.date
+    const id = event.id
 
-            let title = document.createElement("h2")
-            title.innerHTML = item.title
+    const card = $(`
+      <div class="card shadow" style="width: 24rem;">
+        <img src="${image}" class="card-img-top img-fluid" style="min-height: 300px !important; max-height: 300px !important; object-fit: cover;" height="300px" alt="${title}">
+        <div class="card-body">
+          <h5 class="card-title text-truncate">${title}</h5>
+          <p class="card-text mb-1 text-truncate">${mainText}</p>
+          <p class="card-text mb-2"><small class="text-body-secondary">${date}</small></p>
+          <button type="button" class="btn btn-primary shadow" data-bs-toggle="modal" data-bs-target="#${id}">
+            Детальніше
+          </button>
+        </div>
+      </div>
+    `)
 
-            let description = document.createElement("h3")
-            description.innerHTML = item.description
+    const modal = $(`
+      <div class="modal fade" id="${id}" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="staticBackdropLabel">Деталі</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <div id="${id}-carousel" class="carousel slide">
+                <div class="carousel-indicators">
+                  <button type="button" data-bs-target="#${id}-carousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#${id}-carousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#${id}-carousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                  <button type="button" data-bs-target="#${id}-carousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="${image}" class="img-fluid object-fit-cover" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="${subImages[0]}" class="img-fluid object-fit-cover" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="${subImages[1]}" class="img-fluid object-fit-cover" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="${subImages[2]}" class="img-fluid object-fit-cover" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#${id}-carousel" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#${id}-carousel" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+              <h1>${title}</h1>
+              <p><small>${date}</small></p>
+              <p>${mainText}</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" data-bs-dismiss="modal" class="btn btn-primary">Закрити</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    `)
 
-            let event = document.createElement("div")
-            event.classList.add("event")
-            event.setAttribute("data-modal-target", "#"+item.id)
-            
-            event.appendChild(image)
-            event.appendChild(title)
-            event.appendChild(description)
+    card.appendTo(mainContainer)
+    modal.appendTo(mainContainer)
+  });
 
-            if (item.date !== "none") {
-              const dateContainer = document.createElement("div")
-              dateContainer.classList.add("date-container")
-
-              const dateSVG = document.createElement("img")
-              dateSVG.src = "./images/calendar.svg"
-
-              const date = document.createElement("h3")
-              date.innerHTML = item.date
-              date.classList.add("event-date")
-
-              dateContainer.appendChild(dateSVG)
-              dateContainer.appendChild(date)
-              event.appendChild(dateContainer)
-            }
-
-            newsList.appendChild(event)
-
-            //modals
-
-            let modalTitle = document.createElement("div")
-            modalTitle.classList.add("title")
-            modalTitle.innerText = "Інформація"
-
-            let modalCloseButton = document.createElement("button")
-            modalCloseButton.setAttribute("data-close-button", null)
-            modalCloseButton.classList.add("close-button")
-            modalCloseButton.innerHTML = "×"
-
-            let modalHeader = document.createElement("div")
-            modalHeader.classList.add("modal-header")
-            modalHeader.appendChild(modalTitle)
-            modalHeader.appendChild(modalCloseButton)
-
-            let modalPhoto = document.createElement("div")
-            modalPhoto.classList.add("modal-event-img")
-            modalPhoto.style.backgroundImage = `url("${item.image}")`
-
-            let subImages = []
-            item.subImages.forEach(subImgPath => {
-              let subImg = document.createElement("div")
-              subImg.classList.add("modal-sub-img")
-              subImg.style.backgroundImage = `url("${subImgPath}")`
-              subImages.push(subImg)
-            })
-
-            let imagesFrame = document.createElement("div")
-            imagesFrame.classList.add("modal-images-frame")
-            imagesFrame.appendChild(modalPhoto)
-            subImages.forEach(item => {
-              imagesFrame.appendChild(item)
-            })
-
-            let modalShotText = document.createElement("div")
-            modalShotText.classList.add("modal-event-title")
-            modalShotText.innerHTML = item.title
-
-            let modalMainText = document.createElement("div")
-            modalMainText.classList.add("modal-event-description")
-            modalMainText.innerHTML = item.description
-
-            let modalText = document.createElement("div")
-            modalText.classList.add("text")
-            modalText.appendChild(modalShotText)
-
-            if (item.date !== "none") {
-              let modalDate = document.createElement("div")
-              modalDate.classList.add("modal-event-date")
-              modalDate.innerHTML = item.date
-              modalText.appendChild(modalDate)
-            }
-            
-            modalText.appendChild(modalMainText)
-
-            
-
-            let modalBody = document.createElement("div")
-            modalBody.classList.add("modal-body")
-            modalBody.appendChild(imagesFrame)
-            modalBody.appendChild(modalText)
-
-            let modal = document.createElement("div")
-            modal.setAttribute("id", item.id)
-            modal.classList.add("modal")
-            modal.appendChild(modalHeader)
-            modal.appendChild(modalBody)
-
-            body.appendChild(modal)
-        })
-
-        const openModalButtons = document.querySelectorAll('[data-modal-target]')
-        const closeModalButtons = document.querySelectorAll('[data-close-button]')
-        console.log(openModalButtons, closeModalButtons);
-
-        openModalButtons.forEach(button => {
-            button.addEventListener('click', () => {
-              const modal = document.querySelector(button.dataset.modalTarget)
-              openModal(modal)
-            })
-        })
-
-        overlay.addEventListener('click', () => {
-            const modals = document.querySelectorAll('.modal.active')
-            modals.forEach(modal => {
-              closeModal(modal)
-            })
-        })
-
-        closeModalButtons.forEach(button => {
-          button.addEventListener('click', () => {
-            const modal = button.closest('.modal')
-            closeModal(modal)
-            })
-        })
-
-        function openModal(modal) {
-            if (modal == null) return
-            modal.classList.add('active')
-            overlay.classList.add('active')
-            body.classList.add("modal-active")
-        }
-      
-          function closeModal(modal) {
-            if (modal == null) return
-            modal.classList.remove('active')
-            overlay.classList.remove('active')
-            body.classList.remove("modal-active")
-        }
-
-    })
+})

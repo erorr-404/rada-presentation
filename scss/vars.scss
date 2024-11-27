@@ -1,0 +1,31 @@
+// Required
+@import "../node_modules/bootstrap/scss/functions";
+
+$primary: #F99417; // set the $primary variable
+$body-bg: #F5F5F5;
+$secondary: #4D4C7D;
+$dark: #363062;
+$light: #F5F5F5;
+$btn-bg: $primary;
+$carousel-control-color: $primary;
+$carousel-indicator-active-bg: $primary;
+$carousel-caption-color: $primary;
+
+
+// Required
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/variables-dark";
+@import "../node_modules/bootstrap/scss/maps";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/root";
+
+@include media-breakpoint-down(sm) {
+    .arrows {
+        flex-direction: column;
+      }
+}
+
+.btn-primary {
+  @include button-variant($primary, darken($primary, 7.5%), darken($primary, 10%), lighten($primary,5%), lighten($primary, 10%), darken($primary,30%));
+  color: $light;
+}
