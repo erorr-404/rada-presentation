@@ -43,7 +43,7 @@
 }
 
 #block-1 {
-  background-image: url("/assets/school-dark.png");
+  background-image: url("assets/school-dark.png");
   background-position: center;
   background-size: cover;
 }
